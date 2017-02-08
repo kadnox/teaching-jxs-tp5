@@ -8,10 +8,10 @@ pokeApp.config(['$resourceProvider', function($resourceProvider) {
 }]);
 
 pokeApp.controller("poke",function($scope){
-    $scope.idPk = 5
     $scope.listpoke=[
         {idPk:1,nom:'pika'},
         {idPk:2,nom:'pichu'},
-        {idPk:3,nom:'rondoudou'}
+        {idPk:3,nom:'rondoudou'},
+        {idPk:4,nom:'rooudou'}
     ]
 });
