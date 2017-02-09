@@ -7,11 +7,12 @@ pokeApp.config(['$resourceProvider', function($resourceProvider) {
     $resourceProvider.defaults.stripTrailingSlashes = false;
 }]);
 
-pokeApp.controller("poke",function($scope){
+pokeApp.controller("poke",function($scope,$log){
     $scope.listpoke=[
         {idPk:1,nom:'pika'},
         {idPk:2,nom:'pichu'},
         {idPk:3,nom:'rondoudou'},
         {idPk:4,nom:'rooudou'}
-    ]
+    ];
+    $scope.$log = $log;
 });
