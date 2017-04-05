@@ -19,20 +19,27 @@
         <div ng-controller="pokeApi">
             <label>ID pokemon<input type="text" ng-model="idPk"></input></label>
             </br>
-            <label>Nom pokemon <input ng-model="nom" /></label> {{idPk}} {{nom}}
+            <label>Nom pokemon <input ng-model="nom" /></label> {{idPk}} <a href="{{nom}}">{{nom}}</a>
             </br>
             <SELECT ng-model="nom" size="1">
-               <option ng-repeat="pokel in listpoke | filter:nom">{{pokel.name}}</option>
+                  <option ng-repeat="pokel in listpoke | filter:nom">{{pokel.name}}</option>
             </SELECT>
+            
+             
             </br>
 
             <button ng-click="$log.warn(nom)">Go!</button>
+        
 
         </div>
 
         <!-- Pokémon information -->
         <div ng-controller="controlerPokeApi">
-             
+            <p>
+            {{id}}<br />
+            {{nom2}}<br />
+            <li ng-repeat="a in atk">{{a.move.name}}</li>
+            </p>
         </div>
 
     </div>
